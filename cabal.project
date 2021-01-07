@@ -1,0 +1,13 @@
+source-repository-package
+  type: git
+  location: https://github.com/higherkindness/mu-haskell
+  tag: 4cd6560d16bddee9ef79cbfce4a28b3b8922d29f
+  subdir: core/schema
+
+source-repository-package
+  type: git
+  location: https://github.com/higherkindness/mu-haskell
+  tag: 4cd6560d16bddee9ef79cbfce4a28b3b8922d29f
+  subdir: adapter/protobuf
+
+packages: ./mu-tests.cabal

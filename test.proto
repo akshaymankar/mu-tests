@@ -1,0 +1,67 @@
+// NOTE: This is invalid protobuf, but it works with mu-haskell. It was
+// originally copied from waypoint-plugin-sdk repository and modified to ensure
+// that it can be used with mu-haskell. Mu-haskell does not support imports, so
+// the imports were manually added here. 'google.protobuf.Empty' was left as
+// mu-haskell has a special case for that. Here is a list of links to files
+// which were copied:
+// https://github.com/hashicorp/waypoint-plugin-sdk/blob/c3b6eb26185dc7552f8f84d486b680dec74baf5b/proto/plugin.proto
+// https://github.com/protocolbuffers/protobuf/blob/d7a26435fb36b61d742c053407e3a61fb1012706/src/google/protobuf/any.proto
+// https://github.com/googleapis/googleapis/blob/37ba54d7ed4da3052ceff96292631c3b6aae0e63/google/rpc/status.proto
+// https://github.com/mitchellh/protostructure/blob/3cfccdb015ce0b45045430f263a85a018abd7475/protostructure.proto
+
+syntax = "proto3";
+
+package hashicorp.waypoint.sdk;
+
+option go_package = ".;proto";
+
+// import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+// import "google/rpc/status.proto";
+// import "protostructure.proto";
+
+message Foo { string foo = 1; }
+message Bar {
+  Config.Documentation g = 1;
+}
+
+message Config {
+  message FieldDocumentation {
+    string name = 1;
+    string synopsis = 2;
+    string summary = 3;
+    bool optional = 4;
+    string env_var = 5;
+    string type = 6;
+    string default = 7;
+  }
+
+  message MapperDocumentation {
+    string input = 1;
+    string output = 2;
+    string description = 3;
+  }
+
+  message Documentation {
+    string description = 1;
+    string example = 2;
+    string input = 3;
+    string output = 4;
+    FieldDocumentation fields = 5;
+    MapperDocumentation mappers = 6;
+  }
+}
+
+
+service Service {
+  rpc getFoo1 (Foo) returns (Foo);
+  // rpc getFoo2 (Foo) returns (Foo);
+  // rpc getFoo3 (Foo) returns (Foo);
+  // rpc getFoo4 (Foo) returns (Foo);
+  // rpc getFoo5 (Foo) returns (Foo);
+  // rpc getFoo6 (Foo) returns (Foo);
+  // rpc getFoo7 (Foo) returns (Foo);
+  // rpc getFoo8 (Foo) returns (Foo);
+  // rpc getFoo9 (Foo) returns (Foo);
+  rpc getBar (Bar) returns (Bar);
+}
