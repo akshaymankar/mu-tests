@@ -5,8 +5,13 @@ message Foo {
   Foo100 foo = 1;
 }
 
+// Causes reduction overflow
 service Service {
   rpc getFoo(Foo) returns (Foo);
+}
+
+service SmallService {
+  rpc getFoo (Foo37) returns (Foo37);
 }
 
 message Foo1 { string foo = 1; }

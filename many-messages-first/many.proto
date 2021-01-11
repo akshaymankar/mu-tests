@@ -9,6 +9,10 @@ service Service {
   rpc getFoo(Foo) returns (Foo);
 }
 
+service Service100 {
+  rpc getFoo(Foo100) returns (Foo100);
+}
+
 message Foo1 { string foo = 1; }
 message Foo2 { string foo = 1; }
 message Foo3 { string foo = 1; }

@@ -1,4 +1,4 @@
-# Revision history for mu-tests
+# Revision history for many-messages
 
 ## 0.1.0.0 -- YYYY-mm-dd
 

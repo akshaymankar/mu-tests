@@ -10,4 +10,4 @@ source-repository-package
   tag: 4cd6560d16bddee9ef79cbfce4a28b3b8922d29f
   subdir: adapter/protobuf
 
-packages: ./mu-tests.cabal
+packages: ./waypoint/ ./nested-messages/ ./many-messages-first/ ./many-messages-last/

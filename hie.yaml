@@ -1,4 +1,16 @@
 cradle:
   cabal:
-    - path: "src"
+    - path: "./many-messages-first/."
+      component: "lib:many-messages"
+
+    - path: "./many-messages-last/."
+      component: "lib:many-messages-last"
+
+    - path: "./src"
       component: "lib:mu-tests"
+
+    - path: "./nested-messages/."
+      component: "lib:nested-messages"
+
+    - path: "./waypoint/."
+      component: "lib:waypoint"

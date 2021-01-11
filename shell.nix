@@ -12,6 +12,8 @@ with pkgs; mkShell {
     haskellPackages.cabal-install
     ncurses
     hls
+    ormolu
+    time
   ];
   shellHook = ''
     export LD_LIBRARY_PATH=${ncurses}/lib:${zlib}/lib
